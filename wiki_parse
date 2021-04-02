@@ -1,0 +1,16 @@
+from bs4 import BeautifulSoup
+import requests
+import re
+import urllib.request
+
+wiki_page = urllib.request.urlopen("https://en.wikipedia.org/wiki/Indianapolis,_Indiana") # wiki domain
+
+contents = wiki_page.read().decode(errors="replace")
+
+#wiki_page = requests.get("https://en.wikipedia.org/wiki/Muncie,_Indiana")
+
+#soup = BeautifulSoup(wiki_page.text, 'html.parser')
+
+head = re.findall("(?<=<a rel).+?(?=>)", contents, re.DOTALL)
+
+print(head)
