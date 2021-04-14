@@ -38,4 +38,4 @@ COPY overrides.json /opt/conda/share/jupyter/lab/settings/
 WORKDIR /home/jovyan/work
 
 # set default command to launch when container is run
-CMD ["jupyter", "lab", "--ip='0.0.0.0'", "--port=8888", "--no-browser", "--NotebookApp.token=''", "--NotebookApp.password=''"]
+# CMD ["jupyter", "lab", "--ip='0.0.0.0'", "--port=8888", "--no-browser", "--NotebookApp.token=''", "--NotebookApp.password=''"]
